@@ -1,0 +1,417 @@
+==============================================================================================
+Core Java
+==============================================================================================
+- Explain OOPs concept?
+- What is data hiding in terms of OOPs? is there any difference between data hiding and abstraction?
+- Why string is immutable in java?
+- What is immutable? How to create your own immutable class?
+- SOLID principles?
+- Design patterns you have used? (https://www.youtube.com/watch?v=CLt5zJhAJAU  22nd min)
+- Explain Adapter design pattern?
+- Have you used factory design pattern? diff between factory and abstract factory?
+- What is the use of Facade design patterns?
+- Why do we use Generics?
+- What do you understand by code resuability?
+- What is abtraction in java? How do you acheive abstraction?
+- What is interface?
+- Interface vs Abstract class? when to use interface and when to use abstract class?
+- What is recursive function?
+- What is transient?
+- Difference between string and stringbuffer and stringbuilder?
+- Use of static and final method?
+- What is serializable interface?
+- What is singleton? Implement singleton? is it thread safe?
+- How can we break singleton? and how to prevent it?
+- NoClassFound exception vs ClassNotFound exception
+- Can you explain about java memory management?
+- Which memory stores new object?
+- What is garbage collection?
+- how many types of garbage collection in java? What type is used in java8?
+- Observable design pattern?
+- Command Query Responsibility Segregation design pattern
+- What is anonomous inner class in java?
+- What is Serialization? 
+- Exception Hierarchy?
+- Difference between checked and unchecked exception?
+- What is custom exception?
+- Rules of exception in case of method overloading/overriding?
+- In how many ways you can create an object?
+- Why do we need keywords in java?
+- What type of datatype you use for passwords?
+- Can you overload or override static methods in java?
+- Final vs Finally
+- Wrapper classes in Java
+- How to read a file in Java?
+- Checked Exception vs Unchecked Exception? How to create custom checked exception?
+- Real case scenarios from your project of polymorphism?
+- what is serialversionuid?
+- When should we go for enums?
+- aggregation and composition in java? 
+- Is there a possibility that your outer dependecy is not available and inner dependecies are available in composition?
+- pre and post increments and decrements ++ , --
+- covariant return type in java
+
+
+==============================================================================================
+Java 8
+==============================================================================================
+- Major differences between java 7 and java 8?
+- Java8 features you implemented in your project?
+- What is default method in Interface? did we not have default method earlier?
+- What is stream api? why it is introduced in java 8?
+- What are intermediate method in stream? How is it different from terminal method?
+- What are terminal method in stream?
+- What is difference between paraller stream and sequential stream? diff w.r.t. cores of your machine
+- What is functional interface? What are the uses of it?
+- Can functional interface be extracted to another interface?
+- Method References and its usage?
+- Difference between map and flatmap w.r.t. stream api?
+- How you will get current time in java8?
+- Why there was a need for lambda expression?
+- What is the return type of lambda?
+- When do you use lambda function and when do you use normal function?
+- If you are having a map? how you will go with stream or parallel stream
+- Explain difference of stream and parallel stream w.r.t. cores of your machine
+- What is optional?
+- Can Method reference be applied on only static methods?
+- What is difference between filter and map?
+- What is MetaSpace?
+- What is consumer interface?
+- Difference between collection api and stream api
+
+==============================================================================================
+Collection
+==============================================================================================
+- Explain collection Hierarchy (done)
+- Why Map doen't extend collection interface? (done)
+- What is hashing? (done)
+- What is default size of map? how it is increased by default? (done)
+- Working of HashMap? (done)
+- What is hash collision in hashmap? What happens when it happens? (done)
+- If you are having an object as a key, what will happen if you try to add a key which is already present in hashmap?
+- Equals and Hashcode contract? (done)
+- Hashmap vs HashTable? (done)
+- How hashmap is different with concurrent hashmap? (done)
+- Concurrent HashMap, Internal working of concurrent hashmap? any realtime example? (done)
+- Difference between concurrent hashmap and hashtable? (done)
+- Difference between synchronized collection and concurrent collection? (done)
+- What happens when we insert null keys in hashmap? (done)
+- What happens if two threads try to write on same entry in normal hashmap? (done)
+- Internal working of Hashset? (done)
+- Internal working of ArrayList? (done)
+- Weak HashMap?
+- Identity Hashmap?
+- Difference between ArrayList and LinkedList
+- What is fail fast and fail safe? its difference?
+- CopyOnWrite ArrayList
+- Comparable vs Comparator interface?
+- What do you understand by blocking queue?
+- Ho can I maintain insertion order in Set?
+
+==============================================================================================
+Multithreading
+==============================================================================================
+- two thread - one running a-z and other 1,2,3, both threads running parallely,
+	how will ensure that it produces result
+	a 1
+	b 2
+	c 3
+	and so on
+- Thread Lifecycle
+- Executor service in java? Methods of thread executor?
+- How do you create a threads in java?
+- What is future? How do access a value of future once operation is complete?
+- completable future?
+- What is volatile keywords w.r.t. threading or java?
+- Difference between callable and runnable interface?
+- What are the different ways of creating a thread?
+- How do we create thread pool?
+- What is volatile?
+- Callable, runnable, future
+- Hierarchy of threads? explain Life cycle of multithreading here?
+- What is the use of wait and sleep? what is its difference?
+- What is join()? how do you controll threads?
+- What is yield() method?
+- Difference between start and run method in thread class?
+- Object lock? Thread monitor?
+- why wait notify and notifyall are in object class
+- Concept of cascading in terms of lock?
+- Hierarchy of threads? Explain lifecycle here
+- cyclic barrier and countdown latch
+
+==============================================================================================
+Scenario based
+==============================================================================================
+- What happens if object passed as a key in hashmap returns same hashcode and false in equals method (done)
+- How do you monitor performance of your code and scale up performance of your code, how do you maintain code to be optimal 
+(https://www.youtube.com/watch?v=y1tI90TZ2jU) from 3rd minute
+- If I am calling 3rd party service and we are getting exception, how do you handle it?
+- What is your approach to consume web service?
+- I want to produce json? what is your approach?
+- Any challenges you faced in your current project? Have you faced any performance based issues in your project? Have you fixed those?
+- I have 3rd party api's? I have all authentication in place? For diff api will be returning diff response, where request will be diff and
+	diff response? How do you manage your code w.r.t. code reusability? How Generics can help here?
+- You are using a parallel stream for reading a list and at the same time I am modifying a list, will it be possible?
+- You are using executor service and you are doing something? You have a thread in main class which you want to execute once all the
+	executor threads are finsihed
+- I have two consumer from different consumer groups reading messages from kafka from the same topic, will both consumers will get same 
+	message or different?
+- 4 threads trying to access critical section, 3 of them trying to write and one is reading. I want to display the updated value.
+	- explain synchronized block
+	- What about performance if you are using synchronized	
+- Three classes implementing a single interface? how spring provide polymorphism?'
+- We have two interface A and B, both have same methods with same signature, one class child of A, B. As both have same default methods, so
+	here how can we resolve its ambiguity?
+- In Map, suppose we have two entries, {'abc':1},{'cab':2} both have same hashcode so it will be entered in linked list?
+	Now I add one more entry {'bca':1} 
+	What will happen in above scenario? why will it relace with abc and not cab?
+- How do you externalize error code and message in property and read those?
+- How do we get multiple services response from single service?
+- How do we improve performance of query from db and java side?
+- In a pojo class, I override equals method returning true and hashcode method returning 1, I create 2 objects e1, e2
+	and now I am using e1 and e2 using key in hashmap, what will be the size of hashmap
+- I have two class, Parent class throwing io exception and child class throwing null pointer exception, what will happen?
+- How do you detect memory leak in your application?
+	
+==============================================================================================
+Programs
+==============================================================================================
+- Highest occurence of integer number in an array. [1,2,4,3,2,3,2,6] => 2 repeated 3 times
+- Create a class Vehicla and 2 variables color, age, id add it to arraylist and iterate (https://www.youtube.com/watch?v=6C8OrDPWq7c 6:05 min)
+- From list of employees, filter by age > 50
+- remove duplicate element using stream?
+- List of Employees, Employee Objecct - id, name, firmname. Group employees by firm name
+- List of employees - age, name, salary -> Increase salary by 10% whose age > 25
+- Array with 0 and 1 => segeregate 0's on the left and 1's on the right
+	[1,0,0,1,0,1,1,0] => [00001111]
+- Write a program to display vowels in a string
+- Remove duplicates from array?
+- Take a map with string key and string value? sort the map in alphabetical order based on values?
+- Top 3 highest paid salary of employee using stream
+- From List of employees, employee joined after 1st jan, 2022 and want name as key of hashmap and value as first element of address
+
+==============================================================================================
+Rest API
+==============================================================================================
+- What is Rest API? Why it is stateless?
+- Diffference between path param and request param?
+- What are the operation is used in Rest web services? What you will use for update?
+- Difference between post and put?
+- In getAPi, if you have an entity employee, and api returning employee details has no entity matching with your query,
+	what response you will return.
+- File transfer and imports in REST Api.
+- What kind of exception you cover as a part of Rest Api?
+- What is the use of @RequestMapping? 
+- second highest salary using stream?
+- Avg salary of each department from list?
+- Convert a list to map? list of firm? key- firm Id, value - firm name?
+- what is the diff between RequestParam and PathVariable? Which one we need to write first?
+	What is the default behavior of request param, is it mandatory or optional? if mandatory, how to make it optional?
+- What are idempotent and non-idempotent methods?
+- Error code for resorce not found
+
+==============================================================================================
+JPA/MongoDb/Hibernate
+==============================================================================================
+- What is lazy loading in hibernate?
+- What are the disadvantage of hibernate?
+- If I want to connect multiple database? how do you manage that in your application?
+- How do you handle pagination in hibernate/JPA?
+- What is association in hibernate?
+- Hibernate validator?
+- Hibernate template class?
+- Why there was need for mongodb when there was already RDBMS?
+- How is NoSql different from Relational databases?
+- What benefits you get if you go for no sql in your project? is there need of Relational Database?
+- Is there any performance difference between nosql vs relational db?
+- Sharding concepts? How do you shard the data?
+- sharding in mongodb? how is it different from replicaset?
+- how replication works in mongodb?
+- How do you create a collection in mongodb?
+- how do you setup/configure database connection in your project?
+- Which framework you are using to connect to database from your project?
+- EntityManagerFactory?
+- Explain @Transactional?
+- When will you go for pesimistic lock and when you will go for optimistic lock?
+- How does a spring calls/invokes a hibernate queries?
+- How do you create a JPA class?
+- Have you used JPA specification executer?
+- Does Mongo supports join? how do we manage if it doesnt support?
+
+- How do you index data in elastic?
+
+==============================================================================================
+Maven
+==============================================================================================
+- What is dependency tree?
+- Maven? Build stages
+- How do you generate a jar in maven?
+- If you want to skip test stage and build project how you do that?
+- What is difference between dependency and plugins?
+- Why all dependecies you add is downloaded in your local? can we keep it in remote artifact?
+- Which folder jars are downloaded? how is it configured?
+- What do you mean by provided scope?
+- Transitive dependecies?
+
+==============================================================================================
+SPRING / SPRINGBOOT
+==============================================================================================
+- Inversion of control(IOC)
+- Spring bean lifecycle?
+- Dispatcher Servlet in Spring MVC?
+- ContextLoader Listener?
+- What is Spring boot? Why is it needed?
+- Different scope of beans with example?
+- What are the steps you follow to setup a spring boot project?
+- How spring boot runs internally?
+- What is Spring boot CLI?
+- Difference between spring mvc and apring boot?
+- What are the starters available in spring boot?
+- What happens when spring boot application start? What happens in the background?
+- How to create a rest api and secure
+- What is diff between normal webservices and microservice
+- In order to support microservice with different formats like some application consume JSON and other consume xml, how can we acheive this
+	=> Depending on request accept header we can return response in XML/json.
+- How to convert xml to json
+- How do you handle exception in your project?
+- What is @Autoconfiguration in spring boot?
+- What is @SpringBoot annotation?
+- @Required annotation?
+- @Configuration vs @ConfigurationProperties
+- What is @ComponentScan
+- Difference between @Component and @Bean
+- Have you used swagger in your application?
+- Difference between controller and Restcontroller?
+- Is there any difference between @controller and @service?
+- How do you setup spring boot project from scratch? How you configure spring security in your project?
+- how spring security implented in your project?
+- Authorization in your project?
+- Logging mechanism you used in your project and how do you configure it?
+- What are log levels? Which are being primarily used by developers?
+- CustomException handling in your project?
+- How exception handling errors managed via logging mechanism?
+- What are primary annotation to start a spring boot project with RestApi?
+- What are the annotation you have used in a spring boot?
+- Have you used any caching mechanism?
+- What is default bean scope? What are different bean scope?
+- Kafka messaging service? its concepts? its basic concepts?
+- What is pub sub in kafka?
+- Role of Broker in Kafka?
+- consumer groups concepts? Why do we have a need to have different consumer groups? 
+- how will you write a function to consume messages from topic?
+- What is Dependency Injection? Different type of dependency injection?
+- What are the two ways of acheiving dependency injection?
+- What is circular dependecies? we have two setter and constructor? which can be applied here?
+- What are different types of autowiring technicques? How does the spring understands whom to autowire?
+- What are the limitation of using autowiring?
+- Mockito Framework? Junit
+- How to change embeded tomcat service?
+- Reactive services?
+- What are the steps to write a junit?
+- Difference between mock and powermock?
+-How do you register your driver class in jdbc?
+- How do we monitor health of our application
+- Configuration metadata in a spring?
+- Multipart Resolver?
+
+==============================================================================================
+MicroServices
+==============================================================================================
+- What is the need of microservice? How is it difference from monolith?
+- What are the five principles of a microservice?
+- Diff between and monolith and microservice architecture?
+- Benefits of using microservice? (https://www.youtube.com/watch?v=7h3YVojqR3Q 24th min)
+- What is Eureka used for?
+- How do you enable eureka server?
+- How do you manage transactions in microservice?
+- How do you communicate two different microservice within an application?
+- RestTemplate vs Webclient?
+- Have you used ApiGateway? how you did authentication and authorization? What you achieve through gateway?
+- How do you call particular microservice from another microservice?
+- Differene between reactive service and microservice?
+- What are basic design principle you will follow while creating a microservice
+- What is the purpose of service discovery?
+- Why do we need Gateway(API Gateway)?
+- What is sleuth and zipkin?
+- How does @loadbalanced annotation works?
+- How two microservice communicate?
+- How do you deploy microservice to cloud?
+- I have a monolith application, I want to convert this into microservice architecture?
+	What are the best practices you will follow to do this?
+- How does one microservice will communicate with other microservice?
+- When to use messaging queue and when to use rest service for microservice communication?
+- How do you manage logging in multi distributed environment in microservice?
+- oAuth2 in microservice?
+- How session management done in Spring Security?
+- Session management filter?
+
+==============================================================================================
+database
+==============================================================================================
+- query to find repeated/duplicate records?
+- How do you manage db performance, and scalability of application and how do you fix?
+- What is difference between primary key and foreign key?
+- You have clob data in Oracle and we are moving into postgresql, which data type you will use in Postgresql
+- Second highest salary of employee
+- Left outer join vs right outer join vs inner join?
+- Two tables - Employee and department -> Find highest salary of employee from each department
+- What are different joins in Oracle?
+- Table - user_profile , columns id(Autoincremented), gender (male/femal)
+	write a query to update all the records from male to female and female to male
+- database deadlock?
+
+==============================================================================================
+Git
+==============================================================================================
+- Difference between git pull and git fetch?
+- How do you get started to fix bugs?
+- Branching strategies used in your project?
+- Before creating pull request? how do you rebase your code so that code go without conflict?
+- What is git rebase?
+- Difference between rebase and squash?
+
+==============================================================================================
+Deployment
+==============================================================================================
+- What are the deployment tools you are using?
+- Client certificate? how do you manage those?
+- Which deployment process you follow un your services?
+- What do you use to build your project?
+- Load balancer implementation?
+- Any cloud experience?
+- What are the development tools or testing tools you have a used?
+- Process to identify memory leaks within an application?
+
+==============================================================================================
+Others
+==============================================================================================
+- What are your roles and responsibilities as an individual contributer?
+- Any experience of mentoring your juniors or new joinees?
+- What are your approach to streamline new developers in your project?
+- How your agile works within a team?
+- What are primary factor you consider while giving the estimates?
+- Which phases of sdlc you gone through?
+- What are the coding standards you followed?
+- Docker related questions and commands?
+- What is two port while running docker image?
+- How did you reverse single linked list?
+- What is doubly linked list?
+- What is circular linked list?
+- Any sonar coding standards
+- What is most important thing in banking application?
+- What was your approach to support so many repos in ecommerce website?
+
+=====================================================================================================================
+Interview Questions
+=====================================================================================================================
+1)Explain current domain and technical stack 
+2)How do manage exceptions in spring boot project 
+3)How to submit exceptions from child to parent 
+4)Spring boot profiling how to setup 
+5)Concurrent modification exception 6)Optional class 
+7)Difference between @RestController and @Controller 
+8)Hashmap vs Hashtable 
+9)How do you use polymorphism in your project 
+10)When to use interface and when to use abstract class 
+11)Fail fast and fail safe 
+12)Explain flow for the endpoint getAllEmployee () method

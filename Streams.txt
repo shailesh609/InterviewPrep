@@ -1,0 +1,137 @@
+
+==> Employee Class
+	- id, name, age, gender, department, yearOfJoining, salary
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------	
+Q1) How many male and female employees within organization
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Map<string, integer> = employees
+							.stream()
+							.collect(Collectors.groupingBy(Employees::getGender, Collectors.counting()));
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------							
+Q2) Print name of all departments in the organization
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	employees
+		.stream()
+		.map(e -> e.getDepartment())
+		.distinct()
+		.forEach(System.out::println);
+		
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q3) What is the average age of male and female employees?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------	
+	Map<string, integer> = employees
+							.stream()
+							.collect(Collectors.groupingBy(Employees::getGender, Collectors.averagingInt(Employees::getAge)));
+								
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------							
+Q4) Get the details of highest paid employee
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	Optional<Employee> highestPaidEmp = employees
+											.stream()
+											.collect(Collectors.maxBy(Collectors.comparingDouble(Employee::getSalary)));
+	highestPaidEmp.get().getName();
+	
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------	
+Q5) Get the name of all employees who have joined after 2015
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	Optional<Employee> highestPaidEmp = employees
+											.stream()
+											.filter(e -> e.getYearOfJoining() > 2015)
+											.forEach(System.out::println);
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------											
+Q6) Count Number of employees in each department
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------	
+	Map<String, Integer> departmentsTotal = employees
+												.stream()
+												.collect(Collectors.groupingBy(Employee::getDepartment, Collectors.count()));
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------												
+Q7) Average salary of each department
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------	
+	Map<String, Integer> departmentsAvgSal = employees
+												.stream()
+												.collect(Collectors.groupingBy(Employee::getDepartment, Collectors.averagingDouble(Employee::getSalary)));
+							
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------							
+Q8) Get the name of youngest male employee in the department
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Optional<Employee> youngestEmployee = employees
+											.stream()
+											.filter(e -> e.getGender() === 'M')
+											.min(Comparator.comparingInt(Employee::getAge()));
+											
+	youngestEmployee.get();
+	
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------	
+Q9) Who has the most working experience in organization
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	Optional<Employee> mostExperienced = employees
+											.stream()
+											.sorted(Comparator.comparingInt(Employee::getYearOfJoining))
+											.findFirst();
+		
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------		
+Q10) How many male and female employees are there in sales and marketing team
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	Map<String, Integer> saleMarketingGenderBased = employees
+													.stream()
+													.filter(e -> e.getDepartment() == 'Sales and Marketing')
+													.collect(Collectors.groupingBy(Employee::getGender, Collectors.count()));
+													
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q11) What is the average salary of male and female employees
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	Map<String, Double> maleFemaleAvgSalary = employees
+												.stream()
+												.collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getSalary)));
+			
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------			
+Q12) List down names of employees in each department
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	Map<String, List<Employee>> departmentWiseEmployess = employees
+															.stream()
+															.collect(Collectors.groupingBy(Employee::getDepartment));
+										
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------										
+Q13) What is the average salary and total salary of whole organization
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	DoubleSummaryStatistics employeeStatistics = employees
+													.stream()
+													.collect(Collectors.summarizingDouble(Employee::getSalary));
+													
+	Average ==> employeeStatistics.getAverage();
+	Total ==> employeeStatistics.getSum();
+	
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------			
+Q14) Seperate the employees who are younger or equal to 25 years from those who are older than 25 years
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	Map<Boolean, List<Employee>> ageBarries = employees
+												.stream()
+												.collect(Collectors.partitionBy(e -> e.getAge() <= 25));
+												
+	Set<Entry<Boolean, List<Employee>>> entrySet = ageBarries.entrySet();
+	
+	
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------			
+Q14) Who is the oldest employee in organization, what is his age and which employee he belongs to
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	Employee oldestEmp = employees
+							.stream()
+							.max(Comparator.comparingInt(Employee::getAge));
+	
+	emp.getAge();
+	emp.getDepartment();
+
+								
+
+	

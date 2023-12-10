@@ -1,0 +1,235 @@
+
+* To show all database in your mongo db server
+=> show dbs
+	
+* If you want to use database which are already present
+=> use database-name
+Here it will check if database is already present then use it for further operation or it will create a new database with the name specified
+	
+* To Show all collections in a databse
+=> show collections
+
+* To delete database
+=> db.dropDatabase()
+
+* To insert a single document in a collection
+=> db.book.insertOne({
+    "id":106,
+    "bookName":"Nothing Last Forever",
+    "authorName": "Sydney Sheldon"
+})
+
+* To Find all records in a collection
+=> db.book.find()
+
+* To insert multiple records
+=> db.book.insertMany(
+    [
+        {
+            id:107,
+            bookName:"Fifty Shades of Grey",
+            authorName:"E. L. James"
+        },
+        {
+            id: 108,
+            bookName:"The Getaway",
+            authorName:"Lamar Giles"
+        }
+    ]
+)
+
+* To Limit the fetch results
+=> db.book.find().limit(2)   // Here we passed a parameter upto which count we want to limit our results
+
+* To sort a results
+=> db.book.find().sort({authorName:1})   // 1 is for ascending and -1 is for decending
+
+* To sort by multiple keys
+=> db.book.find().sort({authorName:1, _id:-1})
+
+* To skip n number of entries for our results
+=> db.book.find()
+.skip(2)
+.sort({authorName:-1, bookName:-1})
+
+* To Find records by matching criteria like where clause in sql
+=> db.book.find({authorName:"Sydney Sheldon"})
+
+* To return records with specified keys only
+=> db.book.find({authorName:"Sydney Sheldon"},{authorName:1, bookName:1})  // this will return only authorName and bookName and ignore other keys
+
+	In the above query mongo _id field will be return anonomously, if we dnt want to retrieve it use below:
+	
+	=> db.book.find({authorName:"Sydney Sheldon"},{authorName:1, bookName:1, _id:0})
+	
+	To get all fields excepts specified key
+	
+	=> db.book.find({authorName:"Sydney Sheldon"},{_id:0})
+	
+* Few Complex Find queries
+	
+	- Equals to given key 
+		=> db.book.find({authorName:{$eq: "Sydney Sheldon"}})
+		
+	- not Equals given key 
+		=> db.book.find({authorName:{$ne: "Sydney Sheldon"}})
+		
+	- records greater than 
+		=> db.book.find({id:{$gt: 106}})
+		
+	- records greater than equal to 
+		=> db.book.find({id:{$gte: 106}})
+		
+	- records less than 
+		=> db.book.find({id:{$lt: 106}})
+		
+	- records less than equal to 
+		=> db.book.find({id:{$lte: 106}})
+		
+	- match records matching with multiple values 
+		=> db.book.find({bookName:{$in: ['Rich Dad Poor Dad', 'The Power of Habit']}})
+		
+	- non matching records matching with multiple values 
+		=> db.book.find({bookName:{$nin: ['Rich Dad Poor Dad', 'The Power of Habit']}})
+		
+	- return records having the specified property 
+		=> db.book.find({id:{$exists: true}})  
+			// this will also return those records having null for the given property
+			
+	- return records not having the specified property 
+		=> db.book.find({id:{$exists: false}})
+		
+	- query with greater than and less than combined
+		=> db.user_profile.find({
+					version:{
+						$gte: 2,
+						$lt:7
+					}
+			})
+			
+	- query to find with multiple keys criteria
+		=> db.user_profile.find({
+					version:{
+						$gte: 2,
+						$lt:7
+					},
+					active: true
+			})
+			
+	- Either or condition
+		=> db.user_profile.find(
+				{
+					$or: [{version:{$gt: 3}},{firstLogin:false}]
+				}    
+			)
+			
+	- not equals
+		=> db.user_profile.find(
+					{
+						version:{
+							$not: {
+								$gte: 4
+							}
+						}
+					}    
+			)
+			
+	- comparing one key with other
+		=> db.book.find({$expr: { $gt : [ "$salePrice" , "$actualPrice"] }})
+		
+	- query to find nested key criteria
+		=> db.user_profile_staging.find({"providerAssignees.head.userId": "100047"})
+		
+	- Find First Occurence of criteria
+		=> db.user_request.findOne({stageName:"Complete"})
+		
+	- count no of documents matching criteria
+		=> db.user_request.countDocuments(({stageName:"Complete"}))  // returns count in string
+		
+		=> db.user_request.countDocuments(({stageName:"Complete"}))  // returns count in number
+	
+	
+	
+* Queries to update/replace/delete data
+
+	- Update First record matching with criteria
+	
+		db.book.updateOne(
+			{authorName:"Sydney Sheldon"},
+			{
+				$set:{salePrice: 300, actualPrice: 250}
+			}
+		)
+		
+		
+	- To increment the current value of matching record
+		db.book.updateOne(
+			{authorName:"Sydney Sheldon"},
+			{
+				$inc:{salePrice: 20, actualPrice: 15}
+			}
+		)
+	
+	- removing property completely
+	
+		db.book.updateOne(
+			{authorName:"Sydney Sheldon"},
+			{
+				$unset: {salePrice: "" }
+			}
+		)
+		
+	- Adding element in an array property
+		
+		db.book.updateOne(
+			{authorName:"Robert Kiyosak"},
+			{
+				$push: {publishingCountries:"China"}
+			}
+		)
+		
+	- Remove element from an array property
+		
+		db.book.updateOne(
+			{authorName:"Robert Kiyosak"},
+			{
+				$pull: {publishingCountries:"Japan"}
+			}
+		)
+		
+	- Update Many records if property exists
+	
+		db.book.updateMany(
+			{salePrice:{$exists: true}},
+			{
+				$inc: {salePrice: 1000}
+			}
+		)
+		
+	- To replace an existing document with new document
+	
+		db.book.replaceOne(
+			{"bookName": "The Power of Habit"},
+			{
+				"bookName": "Bond King",
+				"authorName": "Mary Childs",
+				"_class": "com.mongo.example.entities.Book"
+			}
+		)
+		
+	- To delete a single record matching with criteria
+	
+		db.book.deleteOne({"bookName": "The Getaway"})
+		
+	- Delete all records whose properties doesn't existing
+	
+		db.book.deleteMany(
+			{salePrice: 
+				{
+					$exists: false
+				}
+			}
+		)
+	
+	
+	Learning Link: https://www.youtube.com/watch?v=ofme2o29ngU

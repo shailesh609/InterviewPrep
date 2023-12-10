@@ -1,0 +1,328 @@
+
+=================================================================================
+HTML/CSS
+=================================================================================
+- How is HTML5 differ with HTML (done)
+- What is doctype? does it make any difference if we use latest syntax of it and older version of doctype? (done)
+- What is Browser Object Model(BOM)? (done)
+- What is the purpose of box sizing in css? (done)
+- What is inline element and block level element? How it will differ in UI? (done)
+- What is attribute? 
+- What is formatting tags?
+- Difference between bold and strong?
+- major differences in CSS3 and old CSS?
+- How Saas is better than css?
+- What is box modelling in CSS?
+- Do you know differences of different unit like px, rem, em, etc.?
+- If you have one div and you want to make them to display on center?
+- What is flexbox in css?
+- What is position relative, absolute and fixed
+- What is pseudo classes?
+- What is semantic HTML?
+- visibility: hidden vs diplay: none
+- pseudo classes and pseudo elements
+- margin vs padding
+
+=================================================================================
+Javascript/Ecmascript
+=================================================================================
+- What is ecmascript?
+- List down some features of ecmascript
+- Difference between let and const and var? Explain with example?
+- Javascript hoisting? How to prevent it?
+- What is the purpose of const? Can we remove or declare elements from array declare with const? 
+	What about objects?
+- Rest and Spread Operator? (https://www.youtube.com/watch?v=h-7kcj6Quks 6.50min)
+- What copy spread operator creates? shallow or deep copy?
+- Any built in methods for deep copy
+- What is Arrow Functions? how is it different from regular function?
+- How legacy JavaScript functions retain scope in arrow function?
+- Is Java Single Threaded or MultiThreaded? How it acheives asynchronous task?
+- EventLoop in Javascript? How it works for asynchronous task?
+-  javascript is synchronous or asynchronous and how to make it asynchronous?
+- Closure concept?
+- Function Currying?
+- What is callback function? Explain with examples?
+- What is callback heck? how to resolve this heck? explain with example?
+- What is class in Javascript? 
+	- Before ES6 , did the concept of class in the form of function existed in javascript?
+	- Construtor function in javascript?
+	- Example : How it is used to create a new object?
+- How this works in function? can you explain with example?
+- What is a difference between JSON and object?
+- Javascript primitive and non-primitive data type?
+- What is type of null?
+- null vs undefined vs not defined?
+- Object.freeze vs Object.seal
+- diff between setTimeout and setInterval?
+- call, apply, bind?
+- What is shadowdom?
+- What is prototype inheritance?
+- Difference between map and foreach?
+- List out string methods?
+- List down array methods?
+- What is event bubbling? how to prevent it?
+- What is difference between scope of this in normal function and arrow function?
+- localStorage vs sessionStorage
+- What is onblur function?
+- What is Progressive Web App? **
+- What is service worker? **
+- can we check any rule using webpack? for eg: check coding standards on css html
+- What is Web Accesibility?
+- without using javascript can we validate email and password of login form
+- Event Bubbling
+- Event Loop
+
+=================================================================================
+Typescript
+=================================================================================
+- What is interface?
+- Enum in typescript?
+- use of any datatype
+- What is the difference between type and interface?
+=================================================================================
+Angular
+=================================================================================
+- What are Observables?
+- Difference between promise and observable?
+- What are the good features in angular which you find very helpfull den other?
+- What does angular cli provides?
+- If I want to create two different environments like prod or staging?
+- How lifecycle of angular works for specific request? (https://www.youtube.com/watch?v=RW6kFpqqcco 2.80min)
+- In which scenario you use particular life cycle hook?
+- New features of angular from 8 till latest
+- What is the usage of Pipes?
+- Pure vs Impure Pipes?
+- Inbuilt pipes? some examples?
+- How can we create custom pipes?
+- Two types of bindings in angular? explain with examples?
+- Event Bindings, property bindings?
+- Angular directives? its types? 
+- Structural Directives
+- How do you create user defined directives?
+- What are different directives you worked on?
+- ngTemplate vs ngContainer
+- What is router-outlet? is it possible to have more than one in one single module?
+- Difference between navigate and navigatebyurl?
+- What is routegaurd?
+- Explain @NgModule?
+- What is http-module?
+- Can you explain shared modules?
+- Lazy Loading in angular?
+- How do you update angular cli?
+- How do you migrate from older version to angular 8?
+- How do you migrate from angular 8 to latest version?
+- How do you deal with localisation in angular?
+- Where do you handle session variables?
+- Stepper form design?
+- Tab based design? how do you load data for different tabs?
+- How do you create dialog model?
+- Have you worked on dashboard kind of design like pie chart, part chart?
+- How do you customize grid pagination?
+- image slider example
+- How do you build your application?
+- How do you support multiple languages in your website
+- How do you customize themes
+- Why cant we use ngIf and ngFor in one div
+- In how many ways we can transport a data from components?
+- Why do we use services in angular?
+- imports of index.html in angular? can we have multiple index.html?
+- does angular application gets started or loaded?
+- Can I have two components with same name in different modules?
+- dependency injection in angular
+- @ViewChild and @ContentChild
+- @Inject and @Injectable
+- What is the process of inserting embedded view from prepaid templates riff
+- Difference between stateless and statefull component?
+- Scenario: user is idle for more than 10mins then throw popup?
+- Do you know about template driven form?
+- Difference between dirty pritim touch?
+- Any experience in Angular Animation?
+- Any caching used in your application?
+- Can we access localstorage data in other table
+- How can we check slowness of application and remedies for that?
+- Scenario: Loading lakhs of records best implementation?
+- most used angular commands
+- test case using jasmine
+- any experience in ng formly
+- what will happen if you use script tag inside angular template
+- Can we have multiple interceptor in  a single app?
+- What are the types of compiler?
+- How do you add dynamic script in angular?
+- What are the types of injector hierarchy?
+- How to add components at module level?
+- In which scenarios change detects occur in angular?
+
+=================================================================================
+React
+=================================================================================
+- What is React? Why is react so popular?
+- Features of react which are not there in angular/view?
+- How React works? Virtual DOM concepts in react?
+- What folder structure you followed in your projects?
+- Child to parent communication in functional components and Class Components?
+- React LifeCycle Methods? As per its 3 phases - Mounting, Updating, UnMounting?
+- Lifecycle methods of react and tell the order of execution.
+- Equivalent hooks for lifecycle methods if any?
+- useEffect hooks - What happens if we pass null/undefined as second parameter?
+- What are other hooks in react? useSelector?
+- What is react fragment?
+- What is redux? How it works?
+- Why do we need middlewear like Saga or thunk?
+- Explain concept of Saga?
+- How to delay dispatch action in thunk?
+- Is there any similarity between functianal Components and Class Based Components?
+- In which cases we can decide whether to use classbased components or functional components?
+	Any performance advantage in both?
+- Have you used useRef? What is purpose of useRef() hook?
+- Give simple example of rendering of two pages using React Router ?
+- How do you handle errors (eg. missing data in rendering mode)  from crashing the page in functional component ?
+- What is the purpose of using Lazy Loading ?
+- What does bind function in react helps?
+- What are Higher Order Components?
+- What are props?
+- Difference between state and props?
+- What is redux? Explain the state management architect.
+- Conditionally rendering component in React
+- Decorators in react.
+- Server Side Rendering. 
+- How to call an API is React!
+- What is controlled and uncontrolled components in React?
+- What is context api?
+- React hooks => useContext, useReducer, useMemo?
+- difference between useMemo vs useContext?
+- Explain event delegation?
+- What is shouldComponentUpdate?
+- Why we use super() in class based component?
+
+=================================================================================
+NodeJs
+=================================================================================
+- What is basic difference between node and other similar technology? 
+	Why it is faster?
+- What is nodejs process model?
+- What is LTS?
+- What are the phases of event loop in NodeJs?
+- What is child process in nodejs? Live usecase you used in your project?
+- Since node is asynchronous, what options are available to make it synchronous?
+- What are the globals provided by node?
+- What is difference between npm and yarn?
+- Explain contents of package.json?
+- What is difference between package.json vs package-lock.json?
+- Difference between dependency and devdependency? any example?
+- In node, how do you check whether the packages which are installed is safe to use or not?
+- datatypes in nodejs?
+- How node will detect which environment to run?
+- How do you debug node application?
+- As a developer what will you prefer between async await or promise?
+- async.paraller vs async.series?
+- promise.all vs promise.allsettled?
+- Difference between get and post?
+- What is error callback?
+- What have you used for authentication and authorization in node?
+- Explain about JWT token? Which encryption alogrithm it uses? What is its lifetime?
+	if I dnt pass lifetime den how long token will work?
+- Can you create a post api?
+- What is middleware? Why do we need this?
+- Can we use middleware for request and response?
+- Which middleware function you have used so far?
+- How do you handle exception in node? How you are dealing with unhandled exception?
+- eventEmitter and eventDispatcher in node?
+- How do you deal with localisation in node?
+- Explain routing mechanism in express js?
+- How do we enable cors in Express?
+- How to write test cases in nodejs?
+
+- What is stub in nodejs?
+- Microservices in nodejs
+- What is option method in context of Rest Api? when it is used and who initiates it?
+- How do you connect node js with database? 
+- What security implementation we can do for our node application?
+- What are the way to find the reason for slow api calls? What can be resolution?
+
+=================================================================================
+Scenario Based
+=================================================================================
+- I need to call an API? => Call api when functional components mounts, Call Api when functional component UnMount
+- In functional component, 
+	-if we are passing value of your state from parent to props in child, and if value of state updated,
+	will the child component re-renders.
+	- Parent has two states and you are passing value of one state to child, and if value of other state
+	gets updated which is not passed to child, will the child component re-renders?
+	- How to prevent if child re-renders in this case?
+- What is the mistake here
+	arrayList.map((elem)=> <child elem =>(elem} />);
+- One object contains 3 keys, 1st is string and other consist of other object with key value pairs, in shallow copy will it
+	create seperate copy?
+- Create promise which returns true when resolved and false when reject?
+- acheive the same using async await
+
+=================================================================================
+Program
+=================================================================================
+- 5432 => 5+4+3+2 => 13 => 1+3 => 4 (Till we get single digit number keep adding digits)
+- Write a JS function to find the first not-repeated character of the given string
+- Filter unique value from array
+- What will be the output of the following :
+	let a = { name: test }
+	let b = {...a};
+	b.name = test2;
+	console.log(a.name);
+	console.log(b.name);
+	
+	// 
+	let a = { name: test,
+			  add : { code: 1 }
+			}
+	let b = {...a};
+	b.add.code = 2;
+	console.log(a.add.code);
+	console.log(b.add.code);
+- Write a polyfill for promiseAll (https://www.youtube.com/watch?v=Io3tOxadi7Y&list=PLqBFzB0Lw6GDyaqLvsGKkUNqZgX4cHyN0&index=5 4.90 min)
+- for(let i=0; i < 10; i++){
+	setTimeOute(function(){
+		console.log(i);
+	});
+  }
+- var x;
+	x=10;
+  function test(){
+	var x;
+	if(x > 20){
+		x = 50;
+	}
+	console.log(x);
+  }
+  
+  test();
+ - Question on binding object?
+	var obj={name: 'abc'};
+	var greeting = function(a,b,c){
+					return "Welcome"+ this.name + "a" + "b" + "c"
+				   }
+				   
+- Gice count of duplicate items in an array, what set does? Give me a count!
+- predict => null == undefined; null === undefined
+- return third highes and third lowest element in array
+- Differentiate map and foreach with an example?
+- In React - Create an age inputbox and display error if age is less than 18
+- Write an example where arrow function makes more sense than regular funcction and vice versa?
+- Take any object of your choice, nested objects and destructure them
+- Sort employees based on employee names
+
+=================================================================================
+Databse
+=================================================================================
+- table storage engines available in mysql
+- indexing in mysql? Why we are using indexing? what are its benefits?
+- stored procedures in mysql?
+- how I can join two collection in mongodb?
+- What is mongoose? What are its benefits?
+- what are the aggregate functions in mongodb?
+- What is partial indexes in mongodb?
+
+=================================================================================
+Others
+=================================================================================
+- About last project and your roles and responsibilities
+- What is role in your agile process?
